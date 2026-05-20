@@ -174,6 +174,7 @@
         .about-image {
             position: relative; border-radius: 16px; overflow: hidden;
             box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            background-size: cover; background-position: center;
         }
         .about-image .placeholder-img {
             width: 100%; aspect-ratio: 4/3;
@@ -182,6 +183,8 @@
             font-size: 3rem;
         }
         .about-image .placeholder-img svg { width: 3rem; height: 3rem; color: #636e72; }
+        .about-image.loaded .placeholder-img { display: none; }
+        .gallery-item.loaded .icon { display: none; }
         .values-grid {
             display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
             margin-top: 50px;
@@ -248,8 +251,10 @@
             margin: 0 auto 16px; overflow: hidden;
             background: linear-gradient(135deg, #dfe6e9, #b2bec3);
             display: flex; align-items: center; justify-content: center;
+            background-size: cover; background-position: center;
         }
         .team-avatar .icon { width: 2.4rem; height: 2.4rem; color: #636e72; }
+        .team-avatar.loaded .icon { display: none; }
         .team-card h4 { font-size: 1.05rem; color: #001529; }
         .team-card .role { font-size: 0.85rem; color: #0055a5; font-weight: 500; margin: 4px 0 8px; }
         .team-card p { font-size: 0.85rem; color: #777; line-height: 1.6; }
@@ -263,6 +268,7 @@
             border-radius: 12px; overflow: hidden; position: relative;
             aspect-ratio: 4/3; cursor: pointer;
             background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+            background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center;
             font-size: 2.5rem;
             transition: all 0.3s;
@@ -535,7 +541,7 @@
                     <p>团队利用2025年暑期时间，前往北京市多所高中开展大学知识普及活动。我们通过专题讲座、经验分享、互动答疑等形式，帮助高中学子了解大学专业设置、校园文化、招生政策以及学习方法，助力他们科学规划升学路径。</p>
                     <p>团队成员来自北科大不同院系，涵盖工、理、管、文等多个学科方向，能够为高中生提供全面、多元的大学生活视角。我们希望通过真诚的分享，让每一位高中生都能对大学有更清晰的认识，对未来有更明确的方向。</p>
                 </div>
-                <div class="about-image fade-up">
+                <div class="about-image fade-up" data-img="images/about.jpg">
                     <div class="placeholder-img">
                         <svg class="icon" style="width:3rem;height:3rem;color:#636e72"><use href="#icon-graduation"/></svg>
                     </div>
@@ -614,49 +620,49 @@
             </div>
             <div class="team-grid">
                 <div class="team-card fade-up">
-                    <div class="team-avatar"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
+                    <div class="team-avatar" data-img="images/team-1.jpg"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
                     <h4>张明</h4>
                     <div class="role">队长 · 主讲人</div>
                     <p>材料科学与工程专业，统筹团队整体工作，负责专业介绍与志愿填报宣讲。</p>
                 </div>
                 <div class="team-card fade-up">
-                    <div class="team-avatar"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
+                    <div class="team-avatar" data-img="images/team-2.jpg"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
                     <h4>李雪</h4>
                     <div class="role">副队长 · 主讲人</div>
                     <p>计算机科学与技术专业，负责科技创新主题宣讲，分享竞赛与科研经验。</p>
                 </div>
                 <div class="team-card fade-up">
-                    <div class="team-avatar"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
+                    <div class="team-avatar" data-img="images/team-3.jpg"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
                     <h4>王浩</h4>
                     <div class="role">大学生活主讲人</div>
                     <p>自动化学院，性格开朗，负责分享大学生活与社团文化相关内容。</p>
                 </div>
                 <div class="team-card fade-up">
-                    <div class="team-avatar"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
+                    <div class="team-avatar" data-img="images/team-4.jpg"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
                     <h4>刘雨昕</h4>
                     <div class="role">生涯规划主讲人</div>
                     <p>经济管理学院，擅长数据分析与规划，负责生涯规划与多元发展路径宣讲。</p>
                 </div>
                 <div class="team-card fade-up">
-                    <div class="team-avatar"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
+                    <div class="team-avatar" data-img="images/team-5.jpg"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
                     <h4>陈思远</h4>
                     <div class="role">学习方法讲师</div>
                     <p>数理学院，高考成绩优异，负责分享高效学习方法和备考策略。</p>
                 </div>
                 <div class="team-card fade-up">
-                    <div class="team-avatar"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
+                    <div class="team-avatar" data-img="images/team-6.jpg"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
                     <h4>赵小雅</h4>
                     <div class="role">文科专业主讲人</div>
                     <p>文法学院，负责介绍人文社科类专业的学习内容与发展前景。</p>
                 </div>
                 <div class="team-card fade-up">
-                    <div class="team-avatar"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
+                    <div class="team-avatar" data-img="images/team-7.jpg"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
                     <h4>周天宇</h4>
                     <div class="role">摄影 · 宣传</div>
                     <p>视觉传达设计专业，负责活动摄影、宣传物料设计与新媒体运营。</p>
                 </div>
                 <div class="team-card fade-up">
-                    <div class="team-avatar"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
+                    <div class="team-avatar" data-img="images/team-8.jpg"><svg class="icon"><use href="#icon-user-graduate"/></svg></div>
                     <h4>林婉</h4>
                     <div class="role">后勤 · 联络</div>
                     <p>行政管理专业，负责与高中对接、行程安排及物资保障工作。</p>
@@ -674,27 +680,27 @@
                 <div class="line"></div>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item fade-up">
+                <div class="gallery-item fade-up" data-img="images/gallery-1.jpg">
                     <svg class="icon"><use href="#icon-presentation"/></svg>
                     <div class="overlay">宣讲会现场</div>
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item fade-up" data-img="images/gallery-2.jpg">
                     <svg class="icon"><use href="#icon-users"/></svg>
                     <div class="overlay">同学们认真聆听</div>
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item fade-up" data-img="images/gallery-3.jpg">
                     <svg class="icon"><use href="#icon-question"/></svg>
                     <div class="overlay">互动答疑环节</div>
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item fade-up" data-img="images/gallery-4.jpg">
                     <svg class="icon"><use href="#icon-handshake"/></svg>
                     <div class="overlay">与校方合影留念</div>
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item fade-up" data-img="images/gallery-5.jpg">
                     <svg class="icon"><use href="#icon-file"/></svg>
                     <div class="overlay">宣传资料展示</div>
                 </div>
-                <div class="gallery-item fade-up">
+                <div class="gallery-item fade-up" data-img="images/gallery-6.jpg">
                     <svg class="icon"><use href="#icon-smile"/></svg>
                     <div class="overlay">团队成员合影</div>
                 </div>
@@ -739,6 +745,16 @@
     </footer>
 
     <script>
+        // Lazy load images (place photos in images/ folder)
+        document.querySelectorAll('[data-img]').forEach(function(el) {
+            var img = new Image();
+            img.onload = function() {
+                el.style.backgroundImage = 'url(' + el.dataset.img + ')';
+                el.classList.add('loaded');
+            };
+            img.src = el.dataset.img;
+        });
+
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) header.classList.add('scrolled');
